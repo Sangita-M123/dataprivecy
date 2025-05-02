@@ -19,6 +19,7 @@ export default defineConfig({
     strictPort: true,
     port: 3000, // Make sure it's running on the correct port
     cors: true,
+    allowedHosts: ['dataprivecy-2.onrender.com'],
   },
   build: {
     outDir: "dist", // Ensure build output goes to the correct folder
