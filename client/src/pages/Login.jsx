@@ -123,7 +123,7 @@ const Login = () => {
 
     setLoading(true);
     try {
-      const res = await axios.post("https://dataprivecy-4.onrender.com/api/auth/login", { email, password });
+      const res = await axios.post("/api/auth/login", { email, password });
 
       if (res.data.success && res.data.user && res.data.user.id) {
         login(res.data.user, res.data.token);
