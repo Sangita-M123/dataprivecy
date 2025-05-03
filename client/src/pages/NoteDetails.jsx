@@ -97,7 +97,7 @@ const NoteDetails = () => {
   useEffect(() => {
     const fetchNote = async () => {
       try {
-        const response = await axios.get(`https://dataprivecy-2.onrender.com/api/note/${id}`, {
+        const response = await axios.get(`https://dataprivecy-4.onrender.com/api/note/${id}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
