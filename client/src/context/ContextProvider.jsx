@@ -80,7 +80,7 @@ const ContextProvider = ({ children }) => {
       }
 
       try {
-        const res = await axios.get("https://dataprivecy-2.onrender.com/api/auth/verify", {
+        const res = await axios.get("https://dataprivecy-4.onrender.com/api/auth/verify", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
