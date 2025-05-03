@@ -209,7 +209,7 @@ const Home = () => {
   // };
   const fetchNotes = async () => {
     try {
-      const { data } = await axios.get("https://dataprivecy-4.onrender.com/api/note", {
+      const { data } = await axios.get("/api/note", {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
 
@@ -240,7 +240,7 @@ const Home = () => {
     });
 
     try {
-      const res = await axios.post("https://dataprivecy-4.onrender.com/api/note/add", formData, {
+      const res = await axios.post("/api/note/add", formData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
           "Content-Type": "multipart/form-data",
@@ -268,7 +268,7 @@ const Home = () => {
     });
 
     try {
-      const res = await axios.put(`https://dataprivecy-4.onrender.com/api/note/${id}`, formData, {
+      const res = await axios.put(`/api/note/${id}`, formData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
           "Content-Type": "multipart/form-data",
@@ -287,7 +287,7 @@ const Home = () => {
 
   const deleteNotes = async (id) => {
     try {
-      const res = await axios.delete(`https://dataprivecy-4.onrender.com/api/note/${id}`, {
+      const res = await axios.delete(`/api/note/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       if (res.data.success) {
