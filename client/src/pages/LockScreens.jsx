@@ -53,7 +53,7 @@ const LockScreens = ({ noteId, onUnlockSuccess }) => {
 
   const handleUnlock = async () => {
     try {
-      const res = await axios.post(`/api/note/unlock/${noteId}`, {
+      const res = await axios.post(`https://dataprivecy-2.onrender.com/api/note/unlock/${noteId}`, {
         password,
       });
 
