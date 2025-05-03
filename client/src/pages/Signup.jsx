@@ -107,7 +107,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://dataprivecy-2.onrender.com/api/auth/register", { name, email, password });
+      const res = await axios.post("https://dataprivecy-4.onrender.com/api/auth/register", { name, email, password });
       
       if (res.data.success) {
         navigate('/login');
