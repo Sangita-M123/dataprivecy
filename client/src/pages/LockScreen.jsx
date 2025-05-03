@@ -210,7 +210,7 @@ const LockScreen = () => {
 
   const fetchLockStatus = async (userId) => {
     try {
-      const res = await axios.get(`https://dataprivecy-2.onrender.com/api/auth/get-lock-status/${userId}`);
+      const res = await axios.get(`https://dataprivecy-4.onrender.com/api/auth/get-lock-status/${userId}`);
       if (res.data.hasLockPassword) {
         setSavedPassword(true);
       }
@@ -230,7 +230,7 @@ const LockScreen = () => {
     }
   
     try {
-      const res = await axios.post("https://dataprivecy-2.onrender.com/api/auth/set-lock-password", {
+      const res = await axios.post("https://dataprivecy-4.onrender.com/api/auth/set-lock-password", {
         userId,
         lockPassword,
       });
@@ -259,7 +259,7 @@ const LockScreen = () => {
     }
 
     try {
-      const res = await axios.post("https://dataprivecy-2.onrender.com/api/auth/verify-lock-password", {
+      const res = await axios.post("https://dataprivecy-4.onrender.com/api/auth/verify-lock-password", {
         userId,
         lockPassword: confirmPassword,
       });
