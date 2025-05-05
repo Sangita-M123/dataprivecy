@@ -9,26 +9,26 @@
 //   },
 // });
 
-// import { defineConfig } from "vite";
-// import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// export default defineConfig({
-//   plugins: [react()],
-//   server: {
-//     host: true, // Allow external access
-//     strictPort: true,
-//     port: 3000, // Make sure it's running on the correct port
-//     cors: true,
-//     allowedHosts: ['dataprivecy-4.onrender.com'],
-//   },
-//   build: {
-//     outDir: "dist", // Ensure build output goes to the correct folder
-//   },
-// });
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-})
+  server: {
+    host: true, // Allow external access
+    strictPort: true,
+    port: 3000, // Make sure it's running on the correct port
+    cors: true,
+  },
+  build: {
+    outDir: "dist", // Ensure build output goes to the correct folder
+  },
+});
+
+// import { defineConfig } from 'vite'
+// import react from '@vitejs/plugin-react'
+
+// // https://vitejs.dev/config/
+// export default defineConfig({
+//   plugins: [react()],
+// })
